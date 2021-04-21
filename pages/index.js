@@ -1,7 +1,8 @@
-import Head, { useEffect } from "next/head";
+import { useEffect } from "react";
+import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+const Home = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos/1")
       .then((response) => response.json())
@@ -68,4 +69,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
